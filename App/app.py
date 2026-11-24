@@ -18,11 +18,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Model Loading
 try:
     model = joblib.load(
-        BASE_DIR / "models" / "fraud_detection_model.pkl"
+        BASE_DIR / "Models" / "fraud_detection_model.pkl"
     )
 
     scaler = joblib.load(
-        BASE_DIR / "models" / "scaler.pkl"
+        BASE_DIR / "Models" / "scaler.pkl"
     )
 
 except Exception as e:
@@ -46,7 +46,7 @@ st.divider()
 # Performance Dashboard
 st.header("📊 Model Performance Dashboard")
 
-report_path = BASE_DIR / "reports" / "model_performance.csv"
+report_path = BASE_DIR / "Reports" / "model_performance.csv"
 
 if report_path.exists():
 
